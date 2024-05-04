@@ -40,6 +40,6 @@ The training process can be interrupted at any time, and the best checkpoint wil
 1. To train the model with specific pre or post layer-norm: in configs/deen_transformer_regular.yaml, under model and under both encoder and decoder add this line layer_norm: "post"
 2. To run on GPUs: In configs/deen_transformer_regular.yaml, under I changed use_cuda to True, and also in joeynmt/joeynmt/training.py uncommented lines 573 to 583 and commented out lines 585-585.
 3. I added a Python script scripts/extract_ppl.py to parse the log files, print out the table and saves a png file with the line plot in the same folder. It takes the path to the folder with the log files as input. That folder should contain only the log files to be used for that.
-  
 
+  
     python extract_ppl.py ../logs/deen_transformer_regular
